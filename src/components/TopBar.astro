@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import ThemeToggle from './ThemeToggle.astro';
+import molino from '../assets/molino-de-viento.png';
+const navigationItems = [
+  { tag: 'Mi trabajo', href: '/my-work' },
+  { tag: 'Mis proyectos', href: '/my-projects' },
+];
+---
+
+<header id="container">
+  <div class="container-top-items">
+    <div class="molino-circle">
+      <a href="/">
+        <Image src={molino} alt="molino" width="50" height="50" />
+      </a>
+    </div>
+    <div class="right-top-items">
+      <nav class="navigation-header">
+        <ul>
+          {
+            navigationItems.map((item) => (
+              <li>
+                <a href={item.href}>{item.tag}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<script>
+  console.log('hola');
+</script>
+
+<style>
+  #container {
+    font-family:
+      Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    border: 1px solid grey;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(90px);
+  }
+
+  .right-top-items {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .container-top-items {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .molino-circle {
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+  }
+  nav li {
+    display: inline;
+  }
+</style>
