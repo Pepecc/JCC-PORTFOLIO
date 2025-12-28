@@ -12,16 +12,30 @@ import Layout from '../layouts/Layout.astro';
         largo de estos años he tenido que desarrollar también varios proyectos de front.
         ¿Puedo decir que soy full stack?, no lo se, lo único que se es que no se nada.
       </p>
+
+      <section>
+        <h2>Conectar</h2>
+        <p>
+          Si quieres contactar conmigo, puedes hacerlo a través de las redes sociales o
+          envíame un correo electrónico
+        </p>
+      </section>
     </div>
   </section>
 </Layout>
+
+<script></script>
 
 <style>
   .main-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 640px;
-    border: 1px solid red;
+    max-width: 750px;
     height: 100%;
+    background-color: var(--color-surface);
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
+    color: var(--color-text);
   }
 </style>

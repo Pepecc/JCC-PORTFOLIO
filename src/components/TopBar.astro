@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 import ThemeToggle from './ThemeToggle.astro';
-import molino from '../assets/molino-de-viento.png';
+// import molino from '../assets/molino-de-viento.png';
 const navigationItems = [
   { tag: 'Mi trabajo', href: '/my-work' },
   { tag: 'Mis proyectos', href: '/my-projects' },
@@ -12,7 +12,20 @@ const navigationItems = [
   <div class="container-top-items">
     <div class="molino-circle">
       <a href="/">
-        <Image src={molino} alt="molino" width="50" height="50" />
+        <!-- <Image src={molino} alt="molino" width="50" height="50" /> -->
+        <svg
+          id="molinux"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M224,224H182.94l-6.3-44.12,3.24,1.91a16,16,0,0,0,21.91-5.67l12-20.34a16,16,0,0,0-5.67-21.91l-35-20.61,40.69-69.13a16,16,0,0,0-5.67-21.91l-20.34-12a16,16,0,0,0-21.91,5.67l-20.61,35L76.12,10.22a16,16,0,0,0-21.91,5.67l-12,20.33a16,16,0,0,0,5.67,21.92l35,20.61L42.21,147.88a16,16,0,0,0,5.67,21.91l20.34,12a15.57,15.57,0,0,0,10.58,2L73.06,224H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16Zm-24-76.34L188,168l-69.13-40.69,12-20.35ZM179.66,24,200,36l-40.69,69.14L139,93.17ZM56,44.35,68,24,137.14,64.7l-12,20.35ZM76.34,168,56,156,96.69,86.86l20.36,12Zm12.88,56L98,162.8l12.77-21.7L159,169.5l7.79,54.5Z"
+          >
+          </path>
+        </svg>
       </a>
     </div>
     <div class="right-top-items">
@@ -40,12 +53,16 @@ const navigationItems = [
   #container {
     font-family:
       Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    border: 1px solid grey;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     position: sticky;
     top: 0;
     backdrop-filter: blur(90px);
+    background-color: var(--color-surface);
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
+    color: var(--color-text);
   }
 
   .right-top-items {
@@ -56,7 +73,7 @@ const navigationItems = [
   .container-top-items {
     margin-left: auto;
     margin-right: auto;
-    max-width: 640px;
+    max-width: 750px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +85,22 @@ const navigationItems = [
     padding: 0.5rem;
   }
 
+  :global(html.dark) #molinux {
+    fill: darkgrey;
+  }
+
+  :global(html.dark) #molinux:hover {
+    fill: white;
+  }
+
+  :global(html.dark) .molino-circle {
+    border: 1px solid darkgrey;
+  }
+
+  :global(html.dark) .molino-circle:hover {
+    border: 1px solid white;
+  }
+
   nav ul {
     display: flex;
     list-style-type: none;
@@ -75,5 +108,18 @@ const navigationItems = [
   }
   nav li {
     display: inline;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  a:visited {
+    color: var(--color-text);
+  }
+  li:hover {
+    transform: translateY(-1px);
+    transition: transform 0.3s ease-in-out;
   }
 </style>
