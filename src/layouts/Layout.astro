@@ -55,18 +55,20 @@ import { ClientRouter } from 'astro:transitions';
     --color-border: #e0e0e0;
     --color-hover: #f0f0f0;
     --color-primary: #0066cc;
-    --color-primary-hover: #0052a3;
+    --color-primary-hover: #666666;
+    --color-card-hover: #dbdbdb;
   }
 
   html.dark {
     --color-bg: hsl(208 96% 16% / 1);
     --color-surface: hsl(208 96% 16% / 1);
-    --color-text: #ffffff;
-    --color-text-secondary: #b0b0b0;
+    --color-text: #ebe2cf;
+    --color-text-secondary: #ffad09;
     --color-border: #404040;
     --color-hover: #333333;
     --color-primary: #4d9fff;
-    --color-primary-hover: #3385ff;
+    --color-primary-hover: #ffad09;
+    --color-card-hover: #023664;
   }
 
   html,
@@ -80,5 +82,35 @@ import { ClientRouter } from 'astro:transitions';
       border-color 0.3s;
     font-family:
       Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  }
+
+  h1,
+  h2 {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--color-text-secondary);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>

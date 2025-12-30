@@ -5,37 +5,118 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Sobre mi">
   <section>
     <div class="main-container">
-      <h2>Josep Company</h2>
+      <h2>Josep Company Cuesta</h2>
       <h3>Desarrollador de software</h3>
       <p>
         Empecé en el desarrollo de software en 2021 como desarrollador backend pero a lo
         largo de estos años he tenido que desarrollar también varios proyectos de front.
         ¿Puedo decir que soy full stack?, no lo se, lo único que se es que no se nada.
       </p>
-
+      <br />
       <section>
         <h2>Conectar</h2>
         <p>
           Si quieres contactar conmigo, puedes hacerlo a través de las redes sociales o
           envíame un correo electrónico
         </p>
+
+        <div class="social-icons">
+          <a href="https://github.com/Pepecc" target="_blank">
+            <svg
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+              >
+              </path>
+            </svg>
+            <a href="https://www.linkedin.com/in/pepe-c-229b561b5/" target="_blank">
+              <svg
+                class="bottom-icons"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="#000000"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                >
+                </path>
+              </svg>
+            </a>
+            <!-- <a href="" target="_blank">
+              <svg
+                class="bottom-icons"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="#000000"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"
+                >
+                </path>
+              </svg>
+            </a> -->
+          </a>
+        </div>
+        <a href="mailto:jcc.dev@outlook.com">jcc.dev@outlook.com</a>
       </section>
     </div>
+
+    <script></script>
+
+    <style>
+      .main-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 750px;
+        height: 100%;
+        background-color: var(--color-surface);
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+        color: var(--color-text);
+      }
+
+      a {
+        font-size: 1.3rem;
+        color: var(--color-text-secondary);
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .bottom-icons {
+        cursor: pointer;
+      }
+
+      :global(html.dark) .bottom-icons {
+        fill: var(--color-text);
+      }
+
+      :global(html.dark) .bottom-icons:hover {
+        fill: var(--color-text-secondary);
+      }
+
+      .bottom-icons:hover {
+        fill: var(--color-text-secondary);
+      }      
+
+      :global(html.dark) a {
+        color: var(--color-text-secondary);
+      }
+    </style>
   </section>
 </Layout>
-
-<script></script>
-
-<style>
-  .main-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 750px;
-    height: 100%;
-    background-color: var(--color-surface);
-    transition:
-      background-color 0.3s,
-      border-color 0.3s;
-    color: var(--color-text);
-  }
-</style>

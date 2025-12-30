@@ -92,12 +92,12 @@
     fill: darkgrey;
   }
 
-  .sun-icon:hover {
+  .sun-icon:hover, .moon-icon:hover {
     transform: translateY(-1px);
     transition: transform 0.3s ease-in-out;
   }
 
-  :global(html.dark) .sun-icon:hover {
-    fill: white;
+  :global(html.dark) .sun-icon:hover, .moon-icon:hover {
+    fill: var(--color-primary-hover);
   }
 </style>

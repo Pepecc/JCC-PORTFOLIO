@@ -3,6 +3,7 @@
 import ThemeToggle from './ThemeToggle.astro';
 // import molino from '../assets/molino-de-viento.png';
 const navigationItems = [
+  { tag: 'Sobre mi', href: '/' },
   { tag: 'Mi trabajo', href: '/my-work' },
   { tag: 'Mis proyectos', href: '/my-projects' },
 ];
@@ -86,21 +87,11 @@ const navigationItems = [
   }
 
   :global(html.dark) #molinux {
-    fill: darkgrey;
+    fill: var(--color-text-secondary);
   }
-
-  :global(html.dark) #molinux:hover {
-    fill: white;
-  }
-
   :global(html.dark) .molino-circle {
-    border: 1px solid darkgrey;
+    border: 1px solid var(--color-text-secondary);
   }
-
-  :global(html.dark) .molino-circle:hover {
-    border: 1px solid white;
-  }
-
   nav ul {
     display: flex;
     list-style-type: none;
@@ -115,11 +106,16 @@ const navigationItems = [
     color: var(--color-text);
   }
 
-  a:visited {
-    color: var(--color-text);
+  a:hover {
+    color: var(--color-primary-hover);
   }
+
   li:hover {
     transform: translateY(-1px);
     transition: transform 0.3s ease-in-out;
+  }
+
+  :global(html.dark) a:hover {
+    color: var(--color-primary-hover);
   }
 </style>

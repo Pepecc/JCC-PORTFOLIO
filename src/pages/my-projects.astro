@@ -6,14 +6,29 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="main-container">
       <h1>Mis proyectos</h1>
-      <h2>Nexus AI</h2>
-      <p>
-        Desarrollo full-stack de una aplicación web con frontend en React y backend en
-        NodeJS que integra APIs de modelos de lenguaje avanzados para generar respuestas,
-        procesar texto y ofrecer funcionalidades inteligentes orientadas al usuario. En
-        esta primera versión, se ofrecen los modelos 4o de OpenAI ChatGPT y Deep Seek
-        Reasoner
-      </p>
+      <br />
+
+      <a href="https://github.com/Pepecc/JCC-PORTFOLIO" target="_blank">
+        <div class="project-card">
+          <h2>Mi portfolio</h2>
+          <p>Portfolio personal desarrollado con Astro</p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="project-card">
+          <h2>Nexus AI</h2>
+          <p>
+            Desarrollo full-stack de una aplicación web con frontend en React y backend en
+            NodeJS que integra APIs de modelos de lenguaje avanzados para generar
+            respuestas, procesar texto y ofrecer funcionalidades inteligentes orientadas
+            al usuario. En esta primera versión, se ofrecen los modelos 4o de OpenAI
+            ChatGPT y Deep Seek Reasoner.
+            <br />
+            Nota: este proyecto se encuentra completado al 85%
+          </p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -27,6 +42,20 @@ import Layout from '../layouts/Layout.astro';
       transition:
         background-color 0.3s,
         border-color 0.3s;
+      color: var(--color-text);
+    }
+    .project-card {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      border-radius: 16px;
+      padding: 1rem;
+    }
+    .project-card:hover {
+      background-color: var(--color-card-hover);
+    }
+    a {
+      text-decoration: none;
       color: var(--color-text);
     }
   </style>
