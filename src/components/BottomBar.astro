@@ -30,7 +30,18 @@
     margin-right: auto;
     max-width: 750px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+  }
+
+  .container-bottom-items span {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 500px) {
+    .container-bottom-items span {
+      font-size: 0.6rem;
+    }
   }
 </style>

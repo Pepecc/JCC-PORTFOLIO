@@ -8,27 +8,116 @@ import Layout from '../layouts/Layout.astro';
       <h1>Mis proyectos</h1>
       <br />
 
-      <a href="https://github.com/Pepecc/JCC-PORTFOLIO" target="_blank">
-        <div class="project-card">
-          <h2>Mi portfolio</h2>
-          <p>Portfolio personal desarrollado con Astro</p>
+      <div class="project-card">
+        <h2>Mi portfolio</h2>
+        <p>Portfolio personal desarrollado con Astro</p>
+        <div class="links-container">
+          <a class="link" href="https://jcc-dev.onrender.com/" target="_blank">
+            <svg
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"
+              >
+              </path>
+            </svg>
+            Enlace a la página... que es la misma que estás visitando
+          </a>
+          <a class="link" href="https://github.com/Pepecc/JCC-PORTFOLIO" target="_blank">
+            <svg
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+              >
+              </path>
+            </svg>
+            Enlace al repositorio
+          </a>
         </div>
-      </a>
+      </div>
 
-      <a href="">
-        <div class="project-card">
-          <h2>Nexus AI</h2>
-          <p>
-            Desarrollo full-stack de una aplicación web con frontend en React y backend en
-            NodeJS que integra APIs de modelos de lenguaje avanzados para generar
-            respuestas, procesar texto y ofrecer funcionalidades inteligentes orientadas
-            al usuario. En esta primera versión, se ofrecen los modelos 4o de OpenAI
-            ChatGPT y Deep Seek Reasoner.
-            <br />
-            Nota: este proyecto se encuentra completado al 85%
-          </p>
+      <div class="project-card">
+        <h2>Nexus AI</h2>
+        <p>
+          Desarrollo full-stack de una aplicación web con frontend en React y backend en
+          NodeJS que integra APIs de modelos de lenguaje avanzados para generar
+          respuestas, procesar texto y ofrecer funcionalidades inteligentes orientadas al
+          usuario. En esta primera versión, se ofrecen los modelos 4o de OpenAI ChatGPT y
+          Deep Seek Reasoner.
+          <br />
+          Nota: este proyecto se encuentra completado al 85%, por este motivo, el enlace a la
+          aplicación todavía no está disponible.
+        </p>
+        <div class="links-container">
+          <a class="link-disabled">
+            <svg
+              class="bottom-icons-disabled"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="darkgrey"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"
+              >
+              </path>
+            </svg>
+            Enlace a la aplicación
+          </a>
+          <a
+            class="link"
+            href="https://github.com/Pepecc/MSFE-DEEPSEEK-INTEGRATION"
+            target="_blank"
+          >
+            <svg
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+              >
+              </path>
+            </svg>
+            Enlace al repositorio del frontend
+          </a>
+          <a
+            class="link"
+            href="https://github.com/Pepecc/MSBE-DEEPSEEK-INTEGRATION"
+            target="_blank"
+          >
+            <svg
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+              >
+              </path>
+            </svg>
+            Enlace al repositorio del backend
+          </a>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
@@ -37,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
       margin-left: auto;
       margin-right: auto;
       max-width: 750px;
-      height: 100%;
+      height: 100vh;
       background-color: var(--color-surface);
       transition:
         background-color 0.3s,
@@ -45,19 +134,52 @@ import Layout from '../layouts/Layout.astro';
       color: var(--color-text);
     }
     .project-card {
-      /* margin-top: 2rem; */
       margin-bottom: 2rem;
+    }
+    .links-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link,
+    .link-disabled {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
       cursor: pointer;
-      border-radius: 16px;
-      padding: 1rem;
     }
-    .project-card:hover {
-      background-color: var(--color-card-hover);
+
+    .bottom-icons-disabled,
+    .link-disabled {
+      pointer-events: none;
+      color: darkgrey;
     }
+
+    .bottom-icons:hover {
+      fill: var(--color-text-secondary);
+    }
+    .link:hover {
+      color: var(--color-text-secondary);
+    }
+
+    :global(html.dark) .bottom-icons {
+      fill: var(--color-text);
+    }
+
+    :global(html.dark) .bottom-icons:hover {
+      fill: var(--color-text-secondary);
+    }
+
     a {
       text-decoration: none;
       color: var(--color-text);
     }
 
+    @media (max-width: 500px) {
+      .link {
+        font-size: 0.7rem;
+      }
+    }
   </style>
 </Layout>

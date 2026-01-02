@@ -10,9 +10,10 @@ import Layout from '../layouts/Layout.astro';
       <h2>Josep Company Cuesta</h2>
       <h3>Desarrollador de software</h3>
       <p>
-        Empecé en el desarrollo de software en 2021 como desarrollador backend pero a lo
-        largo de estos años he tenido que desarrollar también varios proyectos de front.
-        ¿Puedo decir que soy full stack?, no lo se, lo único que se es que no se nada.
+        Soy desarrollador de software full-stack con 4 años de experiencia. Mi base y mis
+        inicios ha sido la parte backend, pero en los últimos dos años he trabajado
+        principalmente en proyectos frontend, participando en la creación, desarrollo,
+        despliegue y mantenimiento de aplicaciones en producción.
       </p>
       <br />
       <section>
@@ -27,8 +28,8 @@ import Layout from '../layouts/Layout.astro';
             <svg
               class="bottom-icons"
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="25"
+              height="25"
               fill="#000000"
               viewBox="0 0 256 256"
             >
@@ -41,8 +42,8 @@ import Layout from '../layouts/Layout.astro';
               <svg
                 class="bottom-icons"
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="25"
+                height="25"
                 fill="#000000"
                 viewBox="0 0 256 256"
               >
@@ -52,21 +53,6 @@ import Layout from '../layouts/Layout.astro';
                 </path>
               </svg>
             </a>
-            <!-- <a href="" target="_blank">
-              <svg
-                class="bottom-icons"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#000000"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"
-                >
-                </path>
-              </svg>
-            </a> -->
           </a>
         </div>
         <a href="mailto:jcc.dev@outlook.com">jcc.dev@outlook.com</a>
@@ -118,6 +104,12 @@ import Layout from '../layouts/Layout.astro';
 
       :global(html.dark) a {
         color: var(--color-text-secondary);
+      }
+
+      @media (max-width: 500px) {
+        a {
+          font-size: 0.9rem;
+        }
       }
     </style>
   </section>
