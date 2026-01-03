@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Mis proyectos">
+<Layout
+  title="Mis proyectos"
+  description="Explora los proyectos web desarrollados por Josep Company Cuesta. Aplicaciones con React, Astro y Node.js"
+  image="/og-image.jpg"
+>
   <section>
     <div class="main-container">
       <h1>Mis proyectos</h1>
@@ -51,16 +55,16 @@ import Layout from '../layouts/Layout.astro';
         <h2>Nexus AI</h2>
         <p>
           Desarrollo full-stack de una aplicación web con frontend en React y backend en
-          NodeJS que integra APIs de modelos de lenguaje avanzados para generar
-          respuestas y ofrecer funcionalidades inteligentes orientadas al
-          usuario. 
-          <br>
-          En esta primera versión, se ofrecen los modelos 4o de OpenAI ChatGPT y
-          Deep Seek Reasoner.
-          <br>
-          <br>
-          <em>Nota: este proyecto se encuentra completado al 85%, por este motivo, el enlace a la
-          aplicación todavía no está disponible.</em>
+          NodeJS que integra APIs de modelos de lenguaje avanzados para generar respuestas
+          y ofrecer funcionalidades inteligentes orientadas al usuario.
+          <br />
+          En esta primera versión, se ofrecen los modelos 4o de OpenAI ChatGPT y Deep Seek Reasoner.
+          <br />
+          <br />
+          <em>
+            Nota: este proyecto se encuentra completado al 85%, por este motivo, el enlace
+            a la aplicación todavía no está disponible.
+          </em>
         </p>
         <div class="links-container">
           <a class="link-disabled">
@@ -180,7 +184,8 @@ import Layout from '../layouts/Layout.astro';
     }
 
     @media (max-width: 500px) {
-      .link, .link-disabled {
+      .link,
+      .link-disabled {
         font-size: 0.7rem;
       }
     }

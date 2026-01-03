@@ -2,6 +2,40 @@
 import TopBar from '../components/TopBar.astro';
 import BottomBar from '../components/BottomBar.astro';
 import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = 'Portfolio de Josep Company Cuesta, desarrollador full-stack especializado en Node.js, React y Astro. Explora mis proyectos y experiencia.',
+  image = '/og-image.jpg',
+} = Astro.props;
+
+const siteUrl = 'https://jcc-dev.onrender.com/';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+
+const personalInfo = {
+  name: 'Josep Company Cuesta',
+  jobTitle: 'Desarrollador Web Full Stack',
+  email: 'jcc.dev@outlook.com',
+  github: 'https://github.com/Pepecc',
+  linkedin: 'https://www.linkedin.com/in/josep-c-229b561b5/',
+  skills: [
+    'JavaScript',
+    'React',
+    'Astro',
+    'Node.js',
+    'TypeScript',
+    'CSS',
+    'Kubernetes',
+    'Docker',
+    'Azure',
+  ],
+};
 ---
 
 <!doctype html>
@@ -11,12 +45,36 @@ import { ClientRouter } from 'astro:transitions';
       name="google-site-verification"
       content="-wRtHIZU5maj8GU8_Hwm-v4OrTvpO-FQbkeG1CowVdE"
     />
+    <meta name="description" content={description} />
+    <meta name="author" content={personalInfo.name} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content={new URL(image, siteUrl)} />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Mi portfolio - Josep Company</title>
     <ClientRouter />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: personalInfo.name,
+        jobTitle: personalInfo.jobTitle,
+        url: siteUrl,
+        email: personalInfo.email,
+        sameAs: [personalInfo.github, personalInfo.linkedin],
+        knowsAbout: personalInfo.skills,
+      })}
+    />
   </head>
   <body>
     <TopBar />
