@@ -58,7 +58,6 @@
     document.body.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
       if (target.matches('#toggle-btn') || target.closest('#toggle-btn')) {
-        console.log('click');
         const appTheme = document.documentElement.classList.contains('dark')
           ? 'dark'
           : 'light';

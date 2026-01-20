@@ -51,12 +51,14 @@ const navigationItems = [
     padding-bottom: 1.5rem;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(90px);
-    background-color: var(--color-surface);
+    backdrop-filter: blur(20px);
+    background-color: var(--color-surface-header);
     transition:
       background-color 0.3s,
       border-color 0.3s;
     color: var(--color-text);
+    z-index: 10;
+    border: 1px solid var(--color-surface-border);
   }
 
   .right-top-items {
