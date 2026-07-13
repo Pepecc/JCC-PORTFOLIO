@@ -14,10 +14,11 @@ import Layout from '../layouts/Layout.astro';
       <h2>Josep Company Cuesta</h2>
       <h3>Desarrollador de software</h3>
       <p>
-        Soy desarrollador de software full-stack con 4 años de experiencia. Mi base y mis
-        inicios ha sido la parte backend, pero en los últimos dos años he trabajado
-        principalmente en proyectos frontend, participando en la creación, desarrollo,
-        despliegue y mantenimiento de aplicaciones en producción
+        Soy desarrollador de software full-stack con más de 5 años de experiencia. Me
+        gusta aprender nuevas tecnologías y trabajar en proyectos de distintos ámbitos,
+        desde aplicaciones empresariales sobre SAP BTP hasta desarrollo web, integraciones
+        con inteligencia artificial e IoT.<br> Actualmente estoy especializado en el
+        desarrollo de servicios backend con Node.js y SAP CAP
       </p>
       <br />
       <section>
@@ -28,8 +29,14 @@ import Layout from '../layouts/Layout.astro';
         </p>
 
         <div class="social-icons">
-          <a href="https://github.com/Pepecc" target="_blank">
+          <a
+            href="https://github.com/Pepecc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
             <svg
+              aria-hidden="true"
               class="bottom-icons"
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -42,35 +49,41 @@ import Layout from '../layouts/Layout.astro';
               >
               </path>
             </svg>
-            <a href="https://www.linkedin.com/in/josep-c-229b561b5/" target="_blank">
-              <svg
-                class="bottom-icons"
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="#000000"
-                viewBox="0 0 256 256"
+          </a>
+          <a
+            href="https://www.linkedin.com/in/josep-c-229b561b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg
+              aria-hidden="true"
+              class="bottom-icons"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
               >
-                <path
-                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-                >
-                </path>
-              </svg>
-            </a>
+              </path>
+            </svg>
           </a>
         </div>
         <a href="mailto:jcc.dev@outlook.com">jcc.dev@outlook.com</a>
       </section>
     </div>
 
-    <script></script>
-
     <style>
       .main-container {
         margin-left: auto;
         margin-right: auto;
         max-width: 750px;
-        height: 100vh;
+        min-height: 100vh;
+        padding-bottom: 6rem;
+        box-sizing: border-box;
         background-color: var(--color-surface);
         transition:
           background-color 0.3s,
