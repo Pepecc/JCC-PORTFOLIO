@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Personal portfolio site for Josep Company Cuesta, built with Astro 5 (static output, no UI framework). All user-facing content is in Spanish. Deployed to Render at https://jcc-dev.onrender.com/ — that URL is hardcoded both in `astro.config.mjs` (`site`, used by the sitemap integration) and in `src/layouts/Layout.astro` (`siteUrl`, used for canonical/OG URLs).
+Personal portfolio site for PepeCC, built with Astro 5 (static output, no UI framework). All user-facing content is in Spanish. Deployed to Render at https://jcc-dev.onrender.com/ — that URL is hardcoded both in `astro.config.mjs` (`site`, used by the sitemap integration) and in `src/layouts/Layout.astro` (`siteUrl`, used for canonical/OG URLs).
 
 ## Commands
 
