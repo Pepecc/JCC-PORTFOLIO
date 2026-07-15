@@ -9,9 +9,9 @@ const jobs = [
         role: 'Desarrollador Backend (SAP BTP / Node.js)',
         period: 'Enero 2026 - actualidad',
         highlights: [
-          'Desarrollo y evolución de servicios backend con SAP CAP (Node.js) sobre SAP BTP, implementando soluciones para dos empresas líderes del sector industrial.',
+          'Desarrollo y evolución de servicios backend con <code>SAP CAP</code> (<code>Node.js</code>) sobre <code>SAP BTP</code>, implementando soluciones para dos empresas líderes del sector industrial.',
           'Coordinación técnica con el equipo del cliente y responsable de los despliegues en producción',
-          'Configuración y mantenimiento de servicios SAP CAP en SAP BTP.',
+          'Configuración y mantenimiento de servicios <code>SAP CAP</code> en <code>SAP BTP</code>.',
         ],
       },
       {
@@ -19,8 +19,8 @@ const jobs = [
         period: 'Septiembre 2021 - Diciembre 2025',
         highlights: [
           'Desarrollo full-stack de una aplicación empresarial para registrar, categorizar y consultar conocimiento derivado de proyectos, facilitando la mejora continua y la toma de decisiones.',
-          'Integración de Azure OpenAI para el desarrollo de un asistente virtual corporativo.',
-          'Integración con IBM Watson Assistant para la implementación de un chatbot empresarial.',
+          'Integración de <code>Azure OpenAI</code> para el desarrollo de un asistente virtual corporativo.',
+          'Integración con <code>IBM Watson Assistant</code> para la implementación de un chatbot empresarial.',
           'Desarrollo de soluciones frontend y backend integradas con asistentes virtuales e inteligencia artificial.',
         ],
       },
@@ -36,19 +36,23 @@ const jobs = [
 >
   <section>
     <div class="main-container">
+      <p class="route">~/mi-trabajo</p>
       <h1>Mi trabajo</h1>
       <br />
       {
         jobs.map((job) => (
           <article>
-            <h2>{job.company}</h2>
+            <h2>
+              {job.company}
+              <span style="color: var(--color-primary)">()</span>
+            </h2>
             {job.positions.map((position) => (
               <div class="position">
                 <h3 class="role">{position.role}</h3>
                 <h3>{position.period}</h3>
                 <ul>
                   {position.highlights.map((highlight) => (
-                    <li>{highlight}</li>
+                    <li set:html={highlight} />
                   ))}
                 </ul>
               </div>
@@ -66,13 +70,18 @@ const jobs = [
     margin-right: auto;
     max-width: 750px;
     min-height: 100vh;
-    padding-bottom: 6rem;
     box-sizing: border-box;
     background-color: var(--color-surface);
     transition:
       background-color 0.3s,
       border-color 0.3s;
     color: var(--color-text);
+  }
+
+  .route {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
   }
 
   .position {
@@ -85,6 +94,5 @@ const jobs = [
 
   li {
     margin-bottom: 1rem;
-    line-height: 1.6;
   }
 </style>

@@ -47,6 +47,12 @@ const personalInfo = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <meta
       name="google-site-verification"
       content="-wRtHIZU5maj8GU8_Hwm-v4OrTvpO-FQbkeG1CowVdE"
@@ -112,6 +118,11 @@ const personalInfo = {
     if (appTheme === 'dark') {
       document.documentElement.classList.add('dark');
     }
+
+    const modeLabel = document.getElementById('theme-mode-label');
+    if (modeLabel) {
+      modeLabel.textContent = appTheme === 'dark' ? 'modo: oscuro' : 'modo: claro';
+    }
   }
 
   applyAppTheme();
@@ -121,31 +132,38 @@ const personalInfo = {
 
 <style is:global>
   :root {
-    --color-bg: #ffffff;
-    --color-surface: #f5f5f5;
-    --color-surface-header: hsl(0 0% 96% / 0.8);
-    --color-surface-border: hsl(0 0% 96% / 0.2);
-    --color-text: #1a1a1a;
-    --color-text-secondary: #666666;
-    --color-border: #e0e0e0;
-    --color-hover: #f0f0f0;
-    --color-primary: #0066cc;
-    --color-primary-hover: #666666;
-    --color-card-hover: #dbdbdb;
+    --color-bg: #f3f3ef;
+    --color-surface: #f3f3ef;
+    --color-surface-header: hsl(60 8% 94% / .85);
+    --color-surface-border: transparent;
+    --color-text: #26251f;
+    --color-text-secondary: #75726a;
+    --color-border: #c6c3b6;
+    --color-hover: #e9e6da;
+    --color-primary: #996a00;
+    --color-primary-hover: #26251f;
+    --color-card-hover: #e9e6da;
+    --color-code-bg: #e9e6da;
   }
 
   html.dark {
-    --color-bg: hsl(208 96% 16% / 1);
-    --color-surface: hsl(208 96% 16% / 1);
-    --color-surface-header: hsl(208 96% 16% / 0.9);
-    --color-surface-border: hsl(208 96% 16% / 0.2);
-    --color-text: #ebe2cf;
-    --color-text-secondary: #ffad09;
-    --color-border: #404040;
-    --color-hover: #333333;
-    --color-primary: #4d9fff;
-    --color-primary-hover: #ffad09;
-    --color-card-hover: #023664;
+    --color-bg: #101418;
+    --color-surface: #101418;
+    --color-surface-header: hsl(210 20% 8% / .85);
+    --color-surface-border: transparent;
+    --color-text: #d6d3c6;
+    --color-text-secondary: #848b92;
+    --color-border: #2c333b;
+    --color-hover: #1c232b;
+    --color-primary: #e6a53c;
+    --color-primary-hover: #f0ede1;
+    --color-card-hover: #1c232b;
+    --color-code-bg: #1c232b;
+  }
+
+  html.dark h1,
+  html.dark h2 {
+    color: #f0ede1;
   }
 
   html,
@@ -158,56 +176,65 @@ const personalInfo = {
       background-color 0.3s,
       border-color 0.3s;
     font-family:
-      Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  }
-
-  h1,
-  h2 {
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
   }
 
   h2 {
-    font-size: 1.5rem;
-    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
   }
 
-  p {
-    font-size: 0.9rem;
-  }
-
+  p,
   li {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.8;
   }
 
   a {
     text-decoration: none;
   }
 
+  .main-container a {
+    color: var(--color-primary);
+  }
+
+  .main-container a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  code {
+    background: var(--color-code-bg);
+    padding: 1px 5px;
+    font-size: inherit;
+  }
+
   @media (max-width: 500px) {
     li {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
     p {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
     }
 
     h2 {
       font-size: 1rem;
-    }
-    h3 {
-      font-size: 0.9rem;
     }
 
     nav li {

@@ -9,20 +9,20 @@ import Layout from '../layouts/Layout.astro';
 >
   <section>
     <div class="main-container">
-      <h1>Sobre mi</h1>
+      <p class="route">~/sobre-mi</p>
+      <h1>Josep Company Cuesta</h1>
+      <h3>// desarrollador de software</h3>
       <br />
-      <h2>Josep Company Cuesta</h2>
-      <h3>Desarrollador de software</h3>
       <p>
         Soy desarrollador de software full-stack con más de 5 años de experiencia. Me
         gusta aprender nuevas tecnologías y trabajar en proyectos de distintos ámbitos,
-        desde aplicaciones empresariales sobre SAP BTP hasta desarrollo web, integraciones
-        con inteligencia artificial e IoT.<br /> Actualmente estoy especializado en el desarrollo
-        de servicios backend con Node.js y SAP CAP
+        desde aplicaciones empresariales sobre <code>SAP BTP</code> hasta desarrollo web,
+        integraciones con inteligencia artificial e IoT.<br /> Actualmente estoy especializado
+        en el desarrollo de servicios backend con <code>Node.js</code> y <code>SAP CAP</code>
       </p>
       <br />
       <section>
-        <h2>Conectar</h2>
+        <h2>conectar<span style="color: var(--color-primary)">()</span></h2>
         <p>
           Si quieres contactar conmigo, puedes hacerlo a través de las redes sociales o
           enviarme un correo electrónico
@@ -72,7 +72,9 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </a>
         </div>
-        <a href="mailto:jcc.dev@outlook.com">jcc.dev@outlook.com</a>
+        <a class="contact-link" href="mailto:jcc.dev@outlook.com"
+          >jcc.dev@outlook.com</a
+        >
       </section>
     </div>
 
@@ -82,7 +84,6 @@ import Layout from '../layouts/Layout.astro';
         margin-right: auto;
         max-width: 750px;
         min-height: 100vh;
-        padding-bottom: 6rem;
         box-sizing: border-box;
         background-color: var(--color-surface);
         transition:
@@ -91,13 +92,10 @@ import Layout from '../layouts/Layout.astro';
         color: var(--color-text);
       }
 
-      p {
-        line-height: 1.6;
-      }
-
-      a {
-        font-size: 1.3rem;
-        color: var(--color-text-secondary);
+      .route {
+        font-size: 0.75rem;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
       }
 
       .social-icons {
@@ -123,14 +121,11 @@ import Layout from '../layouts/Layout.astro';
         fill: var(--color-text-secondary);
       }
 
-      :global(html.dark) a {
-        color: var(--color-text-secondary);
-      }
-
-      @media (max-width: 500px) {
-        a {
-          font-size: 0.9rem;
-        }
+      .contact-link {
+        color: var(--color-primary);
+        text-decoration: none;
+        border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 45%, transparent);
+        font-size: 0.85rem;
       }
     </style>
   </section>

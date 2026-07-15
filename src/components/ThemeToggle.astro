@@ -52,6 +52,11 @@
       document.documentElement.classList.remove('dark');
     }
     localStorage.setItem('app-theme', theme);
+
+    const modeLabel = document.getElementById('theme-mode-label');
+    if (modeLabel) {
+      modeLabel.textContent = theme === 'dark' ? 'modo: oscuro' : 'modo: claro';
+    }
   };
 
   setTheme(getTheme());
@@ -91,11 +96,6 @@
 
   :global(html.dark) .sun-icon {
     fill: darkgrey;
-  }
-
-  .sun-icon:hover, .moon-icon:hover {
-    transform: translateY(-1px);
-    transition: transform 0.3s ease-in-out;
   }
 
   :global(html.dark) .sun-icon:hover,

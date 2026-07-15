@@ -1,16 +1,17 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
 const navigationItems = [
-  { tag: 'Sobre mi', href: '/' },
-  { tag: 'Mi trabajo', href: '/my-work/' },
-  { tag: 'Mis proyectos', href: '/my-projects/' },
+  { number: '01', label: 'sobre-mi', href: '/' },
+  { number: '02', label: 'mi-trabajo', href: '/my-work/' },
+  { number: '03', label: 'mis-proyectos', href: '/my-projects/' },
 ];
+const currentPath = Astro.url.pathname;
 ---
 
 <header id="container">
   <div class="container-top-items">
     <div class="molino-circle">
-      <a href="/" aria-label="Inicio">
+      <a href="/" aria-label="Inicio" class="logo-link">
         <svg
           aria-hidden="true"
           id="molinux"
@@ -25,6 +26,7 @@ const navigationItems = [
           >
           </path>
         </svg>
+        <span class="logo-text">jcc</span>
       </a>
     </div>
     <div class="right-top-items">
@@ -33,7 +35,12 @@ const navigationItems = [
           {
             navigationItems.map((item) => (
               <li>
-                <a href={item.href}>{item.tag}</a>
+                <a
+                  href={item.href}
+                  aria-current={currentPath === item.href ? 'page' : undefined}
+                >
+                  <span class="nav-number">{item.number}</span> {item.label}
+                </a>
               </li>
             ))
           }
@@ -46,20 +53,19 @@ const navigationItems = [
 
 <style>
   #container {
-    font-family:
-      Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(12px);
     background-color: var(--color-surface-header);
     transition:
       background-color 0.3s,
       border-color 0.3s;
     color: var(--color-text);
     z-index: 10;
-    border: 1px solid var(--color-surface-border);
+    border-bottom: 1px dashed var(--color-border);
   }
 
   .right-top-items {
@@ -80,8 +86,20 @@ const navigationItems = [
     padding: 0.5rem;
   }
 
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .logo-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
   :global(html.dark) #molinux {
-    fill: var(--color-text-secondary);
+    fill: var(--color-primary);
   }
   nav ul {
     display: flex;
@@ -100,9 +118,17 @@ const navigationItems = [
     color: var(--color-primary-hover);
   }
 
-  li:hover {
-    transform: translateY(-1px);
-    transition: transform 0.3s ease-in-out;
+  .nav-number {
+    color: var(--color-border);
+  }
+
+  nav a[aria-current='page'] {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  nav a[aria-current='page'] .nav-number {
+    color: var(--color-primary);
   }
 
   :global(html.dark) a:hover {

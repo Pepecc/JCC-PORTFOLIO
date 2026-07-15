@@ -4,25 +4,24 @@ const year = new Date().getFullYear();
 
 <div class="container-footer">
   <div class="container-bottom-items">
-    <span>&copy; {year} - Josep Company Cuesta</span>
+    <span>&copy; {year} josep-company-cuesta</span>
+    <span id="theme-mode-label">modo: claro</span>
   </div>
 </div>
 
 <style>
   .container-footer {
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
-    position: fixed;
-    bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
-    backdrop-filter: blur(90px);
-    font-family:
-      Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    border-top: 1px dashed var(--color-border);
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     background-color: var(--color-surface);
     transition:
       background-color 0.3s,
       border-color 0.3s;
     color: var(--color-text);
+    box-sizing: border-box;
   }
 
   .container-bottom-items {
@@ -31,17 +30,11 @@ const year = new Date().getFullYear();
     max-width: 750px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .container-bottom-items span {
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 500px) {
-    .container-bottom-items span {
-      font-size: 0.8rem;
-    }
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
   }
 </style>
