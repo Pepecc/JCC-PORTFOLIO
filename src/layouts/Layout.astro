@@ -23,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 const personalInfo = {
   name: 'Josep Company Cuesta',
   jobTitle: 'Desarrollador Web Full Stack',
-  email: 'jcc.dev@outlook.com',
+  email: 'contacto@josepcompany.dev',
   github: 'https://github.com/Pepecc',
   linkedin: 'https://www.linkedin.com/in/josep-c-229b561b5/',
   skills: [
@@ -37,7 +37,7 @@ const personalInfo = {
     'Docker',
     'Azure',
     'SAP BTP',
-    'CAP'
+    'CAP',
   ],
 };
 ---
@@ -134,7 +134,7 @@ const personalInfo = {
   :root {
     --color-bg: #f3f3ef;
     --color-surface: #f3f3ef;
-    --color-surface-header: hsl(60 8% 94% / .85);
+    --color-surface-header: hsl(60 8% 94% / 0.85);
     --color-surface-border: transparent;
     --color-text: #26251f;
     --color-text-secondary: #75726a;
@@ -149,7 +149,7 @@ const personalInfo = {
   html.dark {
     --color-bg: #101418;
     --color-surface: #101418;
-    --color-surface-header: hsl(210 20% 8% / .85);
+    --color-surface-header: hsl(210 20% 8% / 0.85);
     --color-surface-border: transparent;
     --color-text: #d6d3c6;
     --color-text-secondary: #848b92;
@@ -175,8 +175,7 @@ const personalInfo = {
     transition:
       background-color 0.3s,
       border-color 0.3s;
-    font-family:
-      'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
   h1 {

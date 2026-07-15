@@ -91,4 +91,4 @@ If the deployment URL ever changes, update both.
 
 - **GitHub:** [@Pepecc](https://github.com/Pepecc)
 - **LinkedIn:** [Josep Company Cuesta](https://www.linkedin.com/in/josep-c-229b561b5/)
-- **Email:** jcc.dev@outlook.com
+- **Email:** contacto@josepcompany.dev
