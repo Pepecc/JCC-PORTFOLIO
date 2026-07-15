@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jcc-dev.onrender.com/',
+  site: 'https://josepcompany.dev/',
 
   server: {
     host: true,

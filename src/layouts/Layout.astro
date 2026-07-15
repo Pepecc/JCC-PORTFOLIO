@@ -7,15 +7,17 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 const {
   title,
   description = 'Portfolio de Josep Company Cuesta, desarrollador full-stack especializado en Node.js, React y Astro. Explora mis proyectos y experiencia.',
   image = '/og-image.jpg',
+  noindex = false,
 } = Astro.props;
 
-const siteUrl = 'https://jcc-dev.onrender.com/';
+const siteUrl = 'https://josepcompany.dev/';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 
 const personalInfo = {
@@ -34,6 +36,8 @@ const personalInfo = {
     'Kubernetes',
     'Docker',
     'Azure',
+    'SAP BTP',
+    'CAP'
   ],
 };
 ---
@@ -49,16 +53,21 @@ const personalInfo = {
     />
     <meta name="description" content={description} />
     <meta name="author" content={personalInfo.name} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalURL} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Josep Company" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:image" content={new URL(image, siteUrl)} />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, siteUrl)} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />

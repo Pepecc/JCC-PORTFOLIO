@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jcc-dev.onrender.com/sitemap-index.xml
+Sitemap: https://josepcompany.dev/sitemap-index.xml
