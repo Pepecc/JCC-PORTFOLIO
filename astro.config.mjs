@@ -12,5 +12,6 @@ export default defineConfig({
     port: 4321,
   },
 
-  integrations: [sitemap()],
+  // Blog oculto hasta su publicación: fuera del sitemap
+  integrations: [sitemap({ filter: (page) => !page.includes('/blog/') })],
 });

@@ -62,7 +62,15 @@ const stackIcons = {
   },
 };
 
-const projects = [
+type Project = {
+  name: string;
+  description: string[];
+  stack: (keyof typeof stackIcons)[];
+  note?: string;
+  links: { icon: keyof typeof iconPaths; label: string; href?: string }[];
+};
+
+const projects: Project[] = [
   {
     name: 'RaspiWeather',
     description: [
@@ -113,15 +121,9 @@ const projects = [
     name: 'Nexus AI',
     description: [
       'Desarrollo full-stack de una aplicación web con frontend en <code>React</code> y backend en <code>NodeJS</code> que integra APIs de modelos de lenguaje avanzados para generar respuestas y ofrecer funcionalidades inteligentes orientadas al usuario.',
-      'En esta primera versión, se ofrecen los modelos 4o de <code>OpenAI ChatGPT</code> y <code>Deep Seek Reasoner</code>.',
     ],
     stack: ['react', 'typescript', 'redux', 'vite', 'nodejs', 'express', 'firebase', 'docker', 'render'],
-    note: 'Nota: este proyecto se encuentra completado al 85%, por este motivo, el enlace a la aplicación todavía no está disponible.',
     links: [
-      {
-        icon: 'web',
-        label: 'Enlace a la aplicación',
-      },
       {
         icon: 'github',
         label: 'Enlace al repositorio del frontend',
@@ -134,13 +136,7 @@ const projects = [
       },
     ],
   },
-] satisfies {
-  name: string;
-  description: string[];
-  stack: (keyof typeof stackIcons)[];
-  note?: string;
-  links: { icon: keyof typeof iconPaths; label: string; href?: string }[];
-}[];
+];
 ---
 
 <Layout
