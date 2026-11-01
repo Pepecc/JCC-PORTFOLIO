@@ -6,22 +6,48 @@ const jobs = [
     company: 'Viewnext',
     positions: [
       {
-        role: 'Desarrollador Backend (SAP BTP / Node.js)',
-        period: 'Enero 2026 - actualidad',
-        highlights: [
-          'Desarrollo y evolución de servicios backend con <code>SAP CAP</code> (<code>Node.js</code>) sobre <code>SAP BTP</code>, implementando soluciones para dos empresas líderes del sector industrial.',
-          'Coordinación técnica con el equipo del cliente y responsable de los despliegues en producción',
-          'Configuración y mantenimiento de servicios <code>SAP CAP</code> en <code>SAP BTP</code>.',
+        role: 'Coordinador técnico · Desarrollador SAP BTP (Node.js / CAP)',
+        period: 'Septiembre 2025 - actualidad',
+        summary:
+          'Proyectos para grandes empresas de los sectores ferroviario, automovilístico y energético sobre <code>SAP BTP Cloud Foundry</code>, con <code>Node.js</code>, <code>TypeScript</code>, <code>SAP CAP/CDS</code>, <code>HANA Cloud</code> y <code>XSUAA</code>.',
+        projects: [
+          {
+            name: 'Middleware Node.js/NestJS · Sector ferroviario',
+            period: 'sept 2025 - actualidad',
+            role: 'Coordinador técnico',
+            highlights: [
+              'Coordinación técnica del equipo e interlocución diaria con el cliente para el seguimiento de incidencias y temas críticos.',
+              'Resolución de incidencias en producción y diagnóstico de incidencias multicapa (frontend, <code>Node.js</code>, SAP), guiando al equipo en su análisis.',
+              'Análisis de rendimiento y pruebas de carga del servicio, e implantación del <code>Autoscaler</code> de SAP BTP para eliminar las caídas ante picos de carga.',
+            ],
+          },
+          {
+            name: 'Aplicación de servicios CAP · Sector automovilístico',
+            period: 'dic 2025 - actualidad',
+            role: 'Referente técnico CAP',
+            highlights: [
+              'Resolución de incidencias en producción y desarrollo de evolutivos sobre una aplicación con un amplio catálogo de servicios <code>SAP CAP</code>, con análisis de datos en <code>HANA Cloud</code> (SQL).',
+              'Gestión de los despliegues a producción de la aplicación y sus servicios asociados.',
+              'Upgrade y refactorización de dependencias obsoletas para mantener la plataforma actualizada.',
+            ],
+          },
+          {
+            name: 'Integraciones y servicios CAP · Sector energético',
+            period: 'oct 2026 - actualidad',
+            role: 'Coordinador técnico',
+            highlights: ['Coordinación técnica del proyecto desde su fase inicial.'],
+          },
         ],
       },
       {
-        role: 'Desarrollador Full-Stack (Node.js / React / Vue.js)',
-        period: 'Septiembre 2021 - Diciembre 2025',
+        role: 'Desarrollador Full Stack (Node.js / React / Vue.js)',
+        period: 'Octubre 2021 - Marzo 2026',
         highlights: [
-          'Desarrollo full-stack de una aplicación empresarial para registrar, categorizar y consultar conocimiento derivado de proyectos, facilitando la mejora continua y la toma de decisiones.',
-          'Integración de <code>Azure OpenAI</code> para el desarrollo de un asistente virtual corporativo.',
-          'Integración con <code>IBM Watson Assistant</code> para la implementación de un chatbot empresarial.',
-          'Desarrollo de soluciones frontend y backend integradas con asistentes virtuales e inteligencia artificial.',
+          'Desarrollo full stack de aplicaciones empresariales con <code>React</code> en frontend y <code>Node.js</code>, <code>Express</code> y <code>TypeScript</code> en backend, entre ellas una aplicación para registrar, categorizar y consultar el conocimiento derivado de proyectos.',
+          'Desarrollo frontend y backend de un asistente virtual corporativo con <code>Azure OpenAI</code>, desplegado en <code>Azure Kubernetes Service</code> e integrado con <code>Microsoft Foundry</code> (2023 - 2026).',
+          'Desarrollo de un chatbot empresarial con <code>IBM Watson Assistant</code> (2021 - 2023).',
+          'Trabajo con servicios <code>Azure</code> (AKS, Azure DevOps, API Management, Application Gateway, Blob Storage, Entra ID) y <code>AWS</code> (ECR, EKS, S3), con CI/CD basado en <code>Docker</code> y <code>Kubernetes</code>.',
+          'Bases de datos relacionales (<code>PostgreSQL</code>) y NoSQL (<code>Azure Cosmos DB</code>, <code>Firebase</code>).',
         ],
       },
     ],
@@ -50,11 +76,27 @@ const jobs = [
               <div class="position">
                 <h3 class="role">{position.role}</h3>
                 <h3>{position.period}</h3>
-                <ul>
-                  {position.highlights.map((highlight) => (
-                    <li set:html={highlight} />
-                  ))}
-                </ul>
+                {position.summary && <p set:html={position.summary} />}
+                {position.highlights && (
+                  <ul>
+                    {position.highlights.map((highlight) => (
+                      <li set:html={highlight} />
+                    ))}
+                  </ul>
+                )}
+                {position.projects?.map((project) => (
+                  <div class="project">
+                    <h4>
+                      {project.name} · {project.period} ·{' '}
+                      <span class="role">{project.role}</span>
+                    </h4>
+                    <ul>
+                      {project.highlights.map((highlight) => (
+                        <li set:html={highlight} />
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             ))}
           </article>
@@ -90,6 +132,10 @@ const jobs = [
 
   .role {
     color: var(--color-primary);
+  }
+
+  .project {
+    margin-top: 2rem;
   }
 
   li {
